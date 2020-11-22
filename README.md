@@ -20,14 +20,15 @@
 - `SSH_PRIVATE_KEY`: Private key of authorized SSH key.
 
 ### Misc: Setting Raspberry Pi Power saving mode OFF
+- Raspberry Pi may lose the WiFi connection after a period of inactivity if the _Power saving mode is turned ON_.
 - Link: [Does Your Raspberry Pi 3 Lose WiFi Connections After a While](http://qdosmsq.dunbar-it.co.uk/blog/2016/03/does-your-raspberry-pi-3-lose-wifi-connections-after-a-while/)
 - Check Power saving mode status,
-```bash
-$ sudo iw dev wlan0 get power_save
->>
-power_save: on
-```
+    ```bash
+    $ sudo iw dev wlan0 get power_save
+    >>
+    power_save: on
+    ```
 - Disable power saving mode,
-```bash
-$ sudo iw dev wlan0 set power_save off
-```
+    ```bash
+    $ sudo iw dev wlan0 set power_save off
+    ```
