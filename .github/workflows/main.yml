@@ -1,0 +1,23 @@
+# CI/CD Workflow to Connect to Raspberry Pi in Home network.
+
+name: Raspberry Pi Connect
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  test-connectivity:
+    name: Test connectivity
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test access to host (remote ssh commands)
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            whoami
+            hostname -I | awk '{print $1}'
+            curl ifconfig.co

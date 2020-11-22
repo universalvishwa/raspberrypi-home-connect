@@ -9,3 +9,16 @@
 - The `Home router` needs to be setup with _Port forwarding_ to connect with Home server's SSH port (Default: 22) and private IP address.
     - Source port: Something not port 22
     - Destination port: 22
+
+### Misc: Setting Raspberry Pi Power saving mode OFF
+- Link: [Does Your Raspberry Pi 3 Lose WiFi Connections After a While](http://qdosmsq.dunbar-it.co.uk/blog/2016/03/does-your-raspberry-pi-3-lose-wifi-connections-after-a-while/)
+- Check Power saving mode status,
+```bash
+$ sudo iw dev wlan0 get power_save
+>>
+power_save: on
+```
+- Disable power saving mode,
+```bash
+$ sudo iw dev wlan0 set power_save off
+```
