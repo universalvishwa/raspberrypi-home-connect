@@ -34,3 +34,4 @@
 
 ### References
 - GitHub Action: [SSH Remote Commands](https://github.com/marketplace/actions/ssh-remote-commands)
+- [Rebooting the Raspberry Pi when it loses wireless connection](https://weworkweplay.com/play/rebooting-the-raspberry-pi-when-it-loses-wireless-connection-wifi/)
