@@ -19,8 +19,6 @@ jobs:
           port: ${{ secrets.PORT }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            whoami >> hell
-            cat hell
+            whoami
             hostname -I | awk '{print $1}'
-            curl api.ipify.org >> aa
-            cat aa
+            curl ifconfig.me

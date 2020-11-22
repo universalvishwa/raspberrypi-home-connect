@@ -9,6 +9,15 @@
 - The `Home router` needs to be setup with _Port forwarding_ to connect with Home server's SSH port (Default: 22) and private IP address.
     - Source port: Something not port 22
     - Destination port: 22
+- The workflow uses SSH keys instead of Password to connect to the Raspberry pi.
+    - Generate an SSH key pair in the Raspberry Pi and add the _**id_rsa.pub**_ to `~/.ssh/authorized_keys`.
+    - Use the _**id_rsa**_ file for `SSH_PRIVATE_KEY` Github secret.
+
+### Github Secrets
+- `HOST`: Home Router's public NAT IP. The result of "What's my IP'
+- `USERNAME`: Raspberry pi user
+- `PORT`: Forwarding Port setup at the Home router
+- `SSH_PRIVATE_KEY`: Private key of authorized SSH key.
 
 ### Misc: Setting Raspberry Pi Power saving mode OFF
 - Link: [Does Your Raspberry Pi 3 Lose WiFi Connections After a While](http://qdosmsq.dunbar-it.co.uk/blog/2016/03/does-your-raspberry-pi-3-lose-wifi-connections-after-a-while/)
