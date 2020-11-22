@@ -1,7 +1,7 @@
 # Raspberry pi Home Connect
 
 ## Overview
-- This repository describes how to setup a Github Action workflow to manage a Raspberry Pi (or other Linux Home server).
+- Describes how to setup a Github Action workflow to manage a Raspberry Pi (or other Linux Home server).
 - In this scenario we are considering the _Port forwarding_ feature available in your Home Router.
 - The objective is to directly interact with Raspberry Pi from Github Actions.
     - However more secure and feature rich methods exist by using 3rd party services. e.g. [remote.it](https://remote.it/)
