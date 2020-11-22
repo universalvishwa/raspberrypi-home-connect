@@ -4,7 +4,7 @@ name: Raspberry Pi Connect
 
 on:
   push:
-    branches: [master]
+    branches: [main]
 
 jobs:
   test-connectivity:
